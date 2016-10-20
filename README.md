@@ -11,7 +11,7 @@ Compilation de tous les fichiers:
    Clés privées enregistrées dans [nom].priv sour le format <t n p q a b>
    Utiliser la commande suivante pour générer des clés de 32 bits et enregistrer les clés dans jol-32.pub et jol-32.priv
    
-   $java gencle 32 cd
+   $java gencle 32 jol-32
    
 2- Programme de chiffrement :  ciffre.java
    Pour chiffrer le contenu du fichier message.txt en mode ECB et avec les clés dans jol-32.pub, utiliser la commande suivante
