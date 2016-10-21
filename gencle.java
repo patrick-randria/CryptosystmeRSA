@@ -11,7 +11,7 @@ public class gencle {
 	public static BigInteger generatePrimeBigInteger(int bitLength) {
 		Random rnd = new SecureRandom();
 		BigInteger generatedValue = BigInteger.probablePrime( bitLength, rnd );
-	    
+		
 	    return generatedValue;
 	    
 	}
@@ -39,7 +39,11 @@ public class gencle {
 		
 		//Generate a = b^-1 modulo (p-1)(q-1)
 		BigInteger phiN = p.subtract(BigInteger.ONE).multiply(q.subtract(BigInteger.ONE)) ;
+		a = EuclideEtendu.modInverse(b,phiN);
+		System.out.println(" ====== calcul de <a> avec la classe EuclideEtendu : " + a);
 		a = b.modInverse(phiN);
+		System.out.println(" ====== calcul de <a> avec la classe BigInteger    : " + a);
+		
 		
 		System.out.println(" ## a,b pair generated. public b is");
 		System.out.println(" ##" + b);
